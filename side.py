@@ -1,6 +1,6 @@
 from vec import Vector
 from math import *
-class side:
+class Side:
     x1 = 0
     y1 = 0
     x2 = 0

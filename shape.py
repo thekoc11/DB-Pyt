@@ -1,5 +1,6 @@
 from vec import Vector
 from par import Particle
+from side import Side
 from math import *
 import random as rn
 class Shape:
@@ -30,12 +31,14 @@ class Shape:
                 for j in range(1):
                     self._sideX.append(self.verts[vertLen - (2 - j)].getX())
                     self._sideY.append(self.verts[vertLen - (2 - j)].getY())
-                # TODO: Append side#self.sides.append()
+                __s = Side(self._sideX[0], self._sideY[0], self._sideX[1], self._sideY[1])
+                self.sides.append(__s)
                 self._sideX.pop()
                 self._sideY.pop()
         if len(self.sides) == len(self.verts) - 1:
             l = len(self.verts) - 1
-            #TODO:Append Side #self.sides.append()
+            __S = Side(self.verts[1].getX, self.verts[1].getY(), self.verts[0].getX, self.verts[0].getY())
+            self.sides.append(__S)
 
 
     def getRandomInt(self, max):
