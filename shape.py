@@ -3,6 +3,7 @@ from par import Particle
 from side import Side
 from math import *
 import random as rn
+
 class Shape:
     sides = []
     verts = []
