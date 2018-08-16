@@ -34,6 +34,9 @@ class Vector:
     def getAngle(self):
         a = Math.atan2(self.Y, self.X)
         return a
+    def getSlope(self):
+        m = self.Y / self.X
+        return m
     def createP(self, l, a):
         self.setLength(l)
         self.setAngle(a)
